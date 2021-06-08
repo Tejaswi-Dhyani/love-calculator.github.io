@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body{
+        width: 100%;
+        height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("backgroungimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+ }
+ header{
+     width: 100%;
+     position: absolute;
+     top:50%;
+     left: 50%;
+     transform: translate(-50% ,-50%);
+ }
+
+</style>
+</head>
+<>
+    <header>
+     <div class="card w-50 m-auto text-center "> 
+        <div class="card-header bg-danger bg-gradient text-white h5">LOVE CALCULATOR</div>
+        <div class="card-body">
+            <form class="form-inline w-75 m-auto">
+                <div class="form-group">
+                <input type="text" name="" class=" form-control text-center" placeholder="YOUR NAME" id="yname">
+                </div>
+                <div><span class="pl-5 pr-5">+</span></div>
+                <div class="form-group">
+                    <input type="text" name="" class="form-control text-center" placeholder="LOVE NAME" id="lname">
+                    </div>
+            </form>
+            <br>
+            <div class="w-75 m-auto ">
+                <button class="btn bg-primary bg-gradient w-50 text-white" onclick="checkloveper()">Click Here</button>
+            </div>
+            <br>
+            <div>
+                <input type="text" name="" id="lovevalue"class=" form-control text-center w-25 m-auto" placeholder="Love  percentage">
+            </div>
+         </div> 
+        <div class="card-footer bg-danger bg-gradient text-white ">Wishing You a Great Day!</div>
+      </div> 
+    </header>
+</body>
+ <script>
+      function checkloveper(){
+          yname=document.getElementById("yname").value;
+          lname=document.getElementById("lname").value
+     if(yname==""){
+        alert("Please enter Your Name")
+     }
+     else if(yname.length <=2){
+        alert("Minimum length is 3")
+     }
+     else if(!isNaN(yname)){
+         alert("Numbers are not allowed")
+
+     }
+     else if(lname==""){
+        alert("Please enter Your Love Name")
+     }
+     else if(lname.length <=2){
+        alert("Minimum length is 3")
+     }
+     else if(!isNaN(lname)){
+         alert("Numbers are not allowed")
+
+     }
+     else{
+    
+         var lovedata=Math.random()*100;
+         lovedata=Math.floor(lovedata)+1;
+         document.getElementById("lovevalue").value=lovedata + "%";
+     }
+    }
+
+ </script>   
+</body>
+</html>
